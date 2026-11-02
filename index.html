@@ -4,297 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Khalil Bouguerra</title>
-<meta name="description" content="Khalil Bouguerra – Marketing digital, publicité, données et IA. Genève et canton de Vaud.">
+<meta name="description" content="Khalil Bouguerra – Digital Marketing Manager, performance et IA. Genève et canton de Vaud, tous secteurs.">
+<link rel="alternate" hreflang="fr" href="index.html">
+<link rel="alternate" hreflang="en" href="en.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap">
-<style>
-  /* Layout: a quiet maison-style page. White space, hairline rules, a serif for statements and a geometric sans for everything that informs. Four chapters, marked with roman numerals on a thin rail. */
-  :root {
-    --bg: #ffffff;
-    --bg-alt: #f5f5f2;
-    --ink: #15181a;
-    --ink-soft: #5c6166;
-    --line: #e1e0db;
-    --accent: #1e4636;
-    --gold: #a2874f;
-    --on-accent: #f4f2ec;
-    --font-display: "Cormorant Garamond", "Cormorant", Garamond, "Times New Roman", serif;
-    --font-body: "Jost", "Futura", "Century Gothic", "Helvetica Neue", Arial, sans-serif;
-    --wrap: 1080px;
-    --nav-h: 64px;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #0f1312; --bg-alt: #151a18; --ink: #ecebe6; --ink-soft: #a5aaa7;
-      --line: #2a302d; --accent: #8fbfa6; --gold: #c8aa6e; --on-accent: #f4f2ec;
-      color-scheme: dark;
-    }
-  }
-  :root[data-theme="dark"] {
-    --bg: #0f1312; --bg-alt: #151a18; --ink: #ecebe6; --ink-soft: #a5aaa7;
-    --line: #2a302d; --accent: #8fbfa6; --gold: #c8aa6e; --on-accent: #f4f2ec;
-    color-scheme: dark;
-  }
-
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 16px); }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-  body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-weight: 400; font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
-  a { color: inherit; text-underline-offset: 4px; text-decoration-color: var(--gold); }
-  a:focus-visible, button:focus-visible, video:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
-  img { max-width: 100%; display: block; }
-  .wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); }
-
-  .label { font-family: var(--font-body); font-weight: 500; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-soft); }
-  h1, h2, h3, h4 { margin: 0; font-weight: 500; text-wrap: balance; }
-  h2 { font-family: var(--font-display); font-size: clamp(36px, 4.8vw, 56px); line-height: 1.06; letter-spacing: -0.005em; max-width: 18ch; }
-  h3 { font-family: var(--font-display); font-weight: 600; font-size: 26px; line-height: 1.15; }
-  h4 { font-family: var(--font-body); font-weight: 500; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; }
-
-  /* Top bar */
-  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
-  .nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 6; background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-  .nav-row { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: var(--nav-h); }
-  .brand { font-family: var(--font-display); font-weight: 600; font-size: 22px; color: var(--ink); text-decoration: none; white-space: nowrap; }
-  .nav-right { display: flex; align-items: center; gap: 28px; min-width: 0; }
-  .chapters-top { display: flex; gap: 26px; list-style: none; margin: 0; padding: 0; }
-  .chapters-top a { font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; white-space: nowrap; padding-block: 6px; }
-  .chapters-top a[aria-current="true"] { color: var(--ink); box-shadow: inset 0 -1px 0 var(--gold); }
-  .tel-top { font-size: 14px; font-weight: 500; letter-spacing: 0.04em; color: var(--ink); text-decoration: none; white-space: nowrap; border: 1px solid var(--ink); padding: 7px 14px; font-variant-numeric: tabular-nums; }
-  .tel-top:hover { background: var(--ink); color: var(--bg); }
-  @media (max-width: 820px) {
-    .nav-row { flex-wrap: wrap; row-gap: 0; padding-block: 10px 0; }
-    .nav-right { display: contents; }
-    .brand { font-size: 20px; }
-    .tel-top { order: 2; font-size: 13px; padding: 5px 10px; }
-    .chapters-top { order: 3; width: 100%; overflow-x: auto; gap: 20px; padding: 10px 0; scrollbar-width: none; }
-    .chapters-top::-webkit-scrollbar { display: none; }
-    .chapters-top a { font-size: 11px; }
-  }
-  @media (min-width: 1400px) { .chapters-top { display: none; } }
-
-  /* Chapter rail */
-  .rail { display: none; }
-  @media (min-width: 1400px) {
-    .rail { display: block; position: fixed; left: max(28px, calc((100vw - var(--wrap)) / 2 - 190px)); top: 50%; transform: translateY(-50%); z-index: 4; width: 160px; }
-    .rail ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 34px; position: relative; }
-    .rail ol::before { content: ""; position: absolute; left: 5px; top: 10px; bottom: 10px; width: 1px; background: var(--line); }
-    .rail .fill { position: absolute; left: 5px; top: 10px; width: 1px; height: calc((100% - 20px) * var(--p, 0)); background: var(--gold); transition: height .3s ease; }
-    .rail a { position: relative; display: grid; grid-template-columns: 11px 1fr; gap: 16px; align-items: start; text-decoration: none; color: var(--ink-soft); }
-    .rail .dot { width: 11px; height: 11px; border-radius: 50%; background: var(--bg); border: 1px solid var(--ink-soft); margin-top: 7px; transition: background .2s, border-color .2s; }
-    .rail .n { font-family: var(--font-display); font-size: 18px; line-height: 1; display: block; color: var(--gold); }
-    .rail .l { font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; display: block; margin-top: 4px; }
-    .rail a:hover .l, .rail a[aria-current="true"] .l { color: var(--ink); }
-    .rail a[aria-current="true"] .dot, .rail a.passed .dot { background: var(--gold); border-color: var(--gold); }
-  }
-
-  /* Hero */
-  .hero { padding-block: 88px 84px; }
-  .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 72px; align-items: center; }
-  .hero h1 { font-family: var(--font-display); font-weight: 500; font-size: clamp(54px, 8.4vw, 104px); line-height: 0.95; letter-spacing: -0.01em; margin-top: 18px; }
-  .hero .disciplines { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 6px 0; }
-  .hero .disciplines span { font-size: 12.5px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
-  .hero .disciplines span + span::before { content: ""; display: inline-block; width: 18px; height: 1px; background: var(--gold); vertical-align: middle; margin: 0 12px; }
-  .thesis { font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: clamp(22px, 2.5vw, 28px); line-height: 1.35; max-width: 34ch; margin: 34px 0 0; }
-  .open { margin: 18px 0 0; color: var(--ink-soft); max-width: 52ch; }
-  .actions { display: flex; flex-wrap: wrap; gap: 12px 14px; align-items: center; margin-top: 34px; }
-  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font: 500 13px var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; padding: 14px 24px; text-decoration: none; border: 1px solid var(--ink); color: var(--ink); background: transparent; cursor: pointer; transition: background .2s, color .2s; }
-  .btn:hover { background: var(--ink); color: var(--bg); }
-  .btn.primary { background: var(--ink); color: var(--bg); }
-  .btn.primary:hover { background: transparent; color: var(--ink); }
-  .btn.tel { letter-spacing: 0.06em; font-variant-numeric: tabular-nums; }
-  .link-quiet { font-size: 13px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: underline; text-decoration-thickness: 1px; }
-  .portrait-frame { position: relative; }
-  .portrait { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; }
-  .portrait-frame figcaption { margin-top: 12px; font-size: 13px; color: var(--ink-soft); }
-  @media (max-width: 820px) {
-    .hero { padding-block: 44px 56px; }
-    .hero-grid { grid-template-columns: 1fr; gap: 32px; }
-    .portrait-frame { order: -1; width: 150px; }
-    .portrait-frame figcaption { display: none; }
-  }
-
-  /* Expertise band */
-  .expertise { background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding-block: 76px; }
-  .exp-grid { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 56px; align-items: start; }
-  .years { border-top: 1px solid var(--gold); padding-top: 18px; }
-  .years .num { font-family: var(--font-display); font-weight: 500; font-size: 112px; line-height: 0.85; font-variant-numeric: lining-nums; }
-  .years .txt { margin-top: 14px; font-family: var(--font-display); font-size: 22px; line-height: 1.25; }
-  .years .sub { margin-top: 10px; font-size: 14.5px; color: var(--ink-soft); }
-  .skills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; }
-  .skill { padding: 22px 0 26px; border-top: 1px solid var(--line); min-width: 0; }
-  .skill:nth-child(-n+2) { border-top-color: var(--gold); }
-  .skill h3 { font-size: 25px; }
-  .skill p { margin: 8px 0 0; color: var(--ink-soft); font-size: 16px; }
-  .tools { margin: 14px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px 18px; }
-  .tools li { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
-  @media (max-width: 860px) {
-    .exp-grid { grid-template-columns: 1fr; gap: 32px; }
-    .years { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 22px; align-items: end; }
-    .years .num { font-size: 84px; grid-row: span 2; }
-    .years .txt { margin: 0; }
-    .years .sub { margin: 0; }
-  }
-  @media (max-width: 600px) { .skills { grid-template-columns: 1fr; } .skill:nth-child(2) { border-top-color: var(--line); } }
-
-  /* Chapters */
-  .chapter { padding-block: 104px; }
-  .chapter + .chapter { border-top: 1px solid var(--line); }
-  .chapter-head { display: grid; gap: 18px; }
-  .chapter-head .label { display: flex; align-items: center; gap: 14px; }
-  .chapter-head .label .rn { font-family: var(--font-display); font-size: 22px; letter-spacing: 0; color: var(--gold); text-transform: none; }
-  .chapter-head .label .rn::after { content: ""; display: inline-block; width: 36px; height: 1px; background: var(--gold); vertical-align: middle; margin-left: 14px; }
-  .story { max-width: 62ch; margin: 30px 0 0; display: grid; gap: 16px; }
-  .story p { margin: 0; font-size: 18px; font-weight: 300; }
-  .story strong { font-weight: 500; }
-  .lesson { margin-top: 56px; max-width: 760px; border-top: 1px solid var(--gold); padding-top: 22px; display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 8px 32px; }
-  .lesson p { margin: 0; font-family: var(--font-display); font-style: italic; font-size: 25px; line-height: 1.35; }
-  @media (max-width: 640px) { .lesson { grid-template-columns: 1fr; } .lesson p { font-size: 22px; } }
-  .block { margin-top: 64px; }
-  .block-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 24px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
-  .block-head p { margin: 0; font-size: 14.5px; color: var(--ink-soft); }
-
-  /* Articles */
-  .articles { display: grid; }
-  .article { display: grid; grid-template-columns: 170px minmax(0, 1fr) auto; gap: 6px 28px; align-items: baseline; padding: 22px 0; border-bottom: 1px solid var(--line); color: var(--ink); text-decoration: none; }
-  .article .t { font-family: var(--font-display); font-weight: 600; font-size: 23px; line-height: 1.25; }
-  .article .go { font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); white-space: nowrap; }
-  .article:hover .t { text-decoration: underline; text-decoration-thickness: 1px; }
-  @media (max-width: 680px) { .article { grid-template-columns: 1fr; } }
-
-  /* Results */
-  .results { margin-top: 56px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--gold); }
-  .result { padding: 24px 24px 8px 0; min-width: 0; }
-  .result + .result { padding-left: 24px; border-left: 1px solid var(--line); }
-  .result .big { font-family: var(--font-display); font-weight: 500; font-size: clamp(38px, 4vw, 50px); line-height: 1; font-variant-numeric: lining-nums tabular-nums; white-space: nowrap; }
-  .result .big small { font-size: 0.5em; margin-left: 4px; }
-  .result h4 { margin-top: 12px; font-size: 11.5px; }
-  .result p { margin: 8px 0 0; font-size: 15px; color: var(--ink-soft); line-height: 1.6; }
-  @media (max-width: 900px) {
-    .results { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .result:nth-child(3) { border-left: 0; padding-left: 0; }
-    .result:nth-child(n+3) { border-top: 1px solid var(--line); }
-  }
-  @media (max-width: 520px) {
-    .results { grid-template-columns: 1fr; }
-    .result + .result { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); }
-  }
-
-  /* Galleries */
-  .gallery { margin-top: 28px; }
-  .gallery h4 { color: var(--ink-soft); }
-  .strip { margin-top: 14px; display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 12px; scrollbar-width: thin; }
-  .strip button { flex: 0 0 auto; width: 220px; padding: 0; border: 0; background: var(--bg-alt); cursor: zoom-in; scroll-snap-align: start; overflow: hidden; }
-  .strip button.tall { width: 156px; }
-  .strip img { width: 100%; height: auto; transition: transform .4s ease, opacity .2s; }
-  .strip button:hover img { transform: scale(1.03); }
-  @media (max-width: 560px) { .strip button { width: 172px; } .strip button.tall { width: 122px; } }
-
-  /* Video */
-  .videos { margin-top: 28px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; align-items: start; }
-  .videos > * { min-width: 0; }
-  .phone { border: 6px solid var(--ink); border-radius: 24px; overflow: hidden; background: #000; aspect-ratio: 9 / 16; max-width: 280px; }
-  .phone video { width: 100%; height: 100%; object-fit: cover; display: block; background: #000; }
-  .video-meta { margin-top: 14px; max-width: 280px; }
-  .video-meta h3 { font-size: 22px; }
-  .video-meta p { margin: 4px 0 0; font-size: 14px; color: var(--ink-soft); }
-  @media (max-width: 820px) { .videos { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); } }
-
-  /* AI */
-  .project { margin-top: 56px; border: 1px solid var(--line); padding: clamp(22px, 4vw, 44px); background: var(--bg); }
-  .project-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 22px 40px; align-items: flex-start; }
-  .project-head > div:first-child { min-width: 0; flex: 1 1 340px; }
-  .project-head p { color: var(--ink-soft); max-width: 58ch; margin: 12px 0 0; }
-  .gain { flex: none; border-top: 1px solid var(--gold); padding-top: 12px; }
-  .gain .v { font-family: var(--font-display); font-size: 46px; line-height: 1; font-variant-numeric: lining-nums; margin-top: 6px; }
-  .gain .v b { font-weight: 600; color: var(--accent); }
-  .flow { margin-top: 36px; display: grid; grid-template-columns: minmax(0, 1fr) 140px minmax(0, 1fr); align-items: stretch; }
-  .stage { background: var(--bg-alt); padding: 22px 24px; min-width: 0; }
-  .stage h3 { font-size: 24px; margin: 4px 0 12px; }
-  .stage ol { margin: 0; padding-left: 20px; font-size: 15.5px; }
-  .stage li { margin-bottom: 7px; }
-  .stage li::marker { color: var(--gold); }
-  .stage li em { font-style: normal; border-bottom: 1px solid var(--gold); }
-  .handoff { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 12px; text-align: center; }
-  .handoff .road { width: 100%; height: 1px; background: var(--gold); position: relative; }
-  .handoff .road::after { content: ""; position: absolute; right: 0; top: 50%; width: 7px; height: 7px; border-top: 1px solid var(--gold); border-right: 1px solid var(--gold); transform: translateY(-50%) rotate(45deg); }
-  .handoff .you { font-family: var(--font-display); font-style: italic; font-size: 20px; }
-  .handoff small { font-size: 13px; color: var(--ink-soft); line-height: 1.4; }
-  @media (max-width: 860px) {
-    .flow { grid-template-columns: 1fr; }
-    .handoff { flex-direction: row; flex-wrap: wrap; padding: 18px 0; }
-    .handoff .road { width: 1px; height: 32px; }
-    .handoff .road::after { right: auto; left: 50%; top: auto; bottom: 1px; transform: translateX(-50%) rotate(135deg); }
-  }
-  .shots { margin-top: 32px; display: grid; gap: 22px; }
-  .shots > * { min-width: 0; }
-  figure { margin: 0; min-width: 0; }
-  .shot { overflow-x: auto; background: #1c1c1c; }
-  .shot img { max-width: none; width: 1100px; height: auto; }
-  @media (min-width: 1000px) { .shot img { width: 100%; max-width: 100%; } }
-  .shots figcaption { font-size: 14px; color: var(--ink-soft); margin-top: 10px; }
-
-  .method { margin-top: 28px; list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; counter-reset: m; border-top: 1px solid var(--gold); }
-  .method li { counter-increment: m; padding: 22px 22px 6px 0; min-width: 0; }
-  .method li + li { padding-left: 22px; border-left: 1px solid var(--line); }
-  .method li::before { content: counter(m, upper-roman); display: block; font-family: var(--font-display); font-size: 24px; color: var(--gold); line-height: 1; }
-  .method h4 { margin-top: 12px; }
-  .method p { margin: 8px 0 0; font-size: 15px; color: var(--ink-soft); line-height: 1.6; }
-  @media (max-width: 900px) {
-    .method { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .method li:nth-child(3) { border-left: 0; padding-left: 0; }
-    .method li:nth-child(n+3) { border-top: 1px solid var(--line); }
-  }
-  @media (max-width: 520px) { .method { grid-template-columns: 1fr; } .method li + li { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); } }
-
-  .uses { margin-top: 28px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
-  .use { background: var(--bg-alt); padding: 20px 20px 22px; min-width: 0; }
-  .use h4 { color: var(--accent); }
-  .use p { margin: 8px 0 0; font-size: 15px; line-height: 1.55; }
-  @media (max-width: 900px) { .uses { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 520px) { .uses { grid-template-columns: 1fr; } }
-
-  .next { margin-top: 28px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px 28px; align-items: start; border: 1px solid var(--accent); padding: 26px 28px; }
-  .next .tag { font-size: 11.5px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); padding: 4px 10px; white-space: nowrap; }
-  .next h3 { font-size: 28px; }
-  .next p { margin: 6px 0 0; color: var(--ink-soft); }
-  @media (max-width: 640px) { .next { grid-template-columns: 1fr; } .next .tag { justify-self: start; } }
-
-  /* Contact */
-  .finale { background: #1e4636; color: var(--on-accent); padding-block: 112px; }
-  .finale .label { color: color-mix(in srgb, var(--on-accent) 70%, transparent); }
-  .finale .chapter-head .label .rn { color: #d4b97e; }
-  .finale .chapter-head .label .rn::after { background: #d4b97e; }
-  .finale h2 { color: var(--on-accent); max-width: 16ch; }
-  .finale-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 440px); gap: 72px; align-items: end; }
-  .finale .intro { margin: 26px 0 0; font-weight: 300; font-size: 18px; max-width: 46ch; color: color-mix(in srgb, var(--on-accent) 88%, transparent); }
-  .facts { margin: 0; display: grid; }
-  .facts div { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 16px; padding: 16px 0; border-top: 1px solid color-mix(in srgb, var(--on-accent) 22%, transparent); }
-  .facts div:last-child { border-bottom: 1px solid color-mix(in srgb, var(--on-accent) 22%, transparent); }
-  .facts dt { font-size: 11.5px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: color-mix(in srgb, var(--on-accent) 65%, transparent); padding-top: 4px; }
-  .facts dd { margin: 0; font-size: 16px; color: var(--on-accent); overflow-wrap: anywhere; }
-  .facts dd.tel { font-family: var(--font-display); font-size: 30px; line-height: 1.1; font-variant-numeric: lining-nums; }
-  .facts dd a { text-decoration: none; }
-  .facts dd a:hover { text-decoration: underline; text-decoration-color: #d4b97e; }
-  .finale .actions { margin-top: 30px; }
-  .finale .btn { border-color: var(--on-accent); color: var(--on-accent); }
-  .finale .btn:hover { background: var(--on-accent); color: #1e4636; }
-  .finale .btn.primary { background: var(--on-accent); color: #1e4636; }
-  .finale .btn.primary:hover { background: transparent; color: var(--on-accent); }
-  @media (max-width: 860px) { .finale { padding-block: 80px; } .finale-grid { grid-template-columns: 1fr; gap: 40px; } }
-  @media (max-width: 420px) { .facts div { grid-template-columns: 1fr; gap: 2px; } .facts dd.tel { font-size: 26px; } }
-  .foot { padding-block: 26px; font-size: 13px; color: var(--ink-soft); background: var(--bg); }
-
-  /* Lightbox */
-  dialog { border: 0; padding: 0; background: transparent; max-width: min(92vw, 820px); max-height: 92vh; }
-  dialog::backdrop { background: rgba(10, 12, 12, 0.9); }
-  dialog img { max-height: 82vh; width: auto; margin: 0 auto; }
-  dialog .close { display: block; margin: 0 0 12px auto; font: 500 12px var(--font-body); letter-spacing: 0.16em; text-transform: uppercase; color: #fff; background: transparent; border: 1px solid rgba(255,255,255,.5); padding: 8px 14px; cursor: pointer; }
-  dialog p { color: #e8e7e2; font-size: 14px; margin: 12px 0 0; text-align: center; }
-
-  @media (prefers-reduced-motion: reduce) { .strip img, .btn, .rail .fill, .rail .dot { transition: none; } .strip button:hover img { transform: none; } }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="nav">
@@ -308,6 +24,7 @@
         <li><a href="#automatiser" data-k="automatiser">III · IA</a></li>
         <li><a href="#suite" data-k="suite">IV · Contact</a></li>
       </ul>
+      <a class="lang" href="en.html" hreflang="en" lang="en">EN</a>
       <a class="tel-top" href="tel:+41767768044">+41 76 776 80 44</a>
     </div>
   </div>
@@ -328,11 +45,11 @@
   <section class="hero" id="depart">
     <div class="wrap hero-grid">
       <div>
-        <p class="label">Genève · Canton de Vaud</p>
+        <p class="label">Genève · Canton de Vaud · Tous secteurs</p>
         <h1>Khalil Bouguerra</h1>
-        <div class="disciplines"><span>Marketing digital</span><span>Publicité</span><span>Données</span><span>IA</span></div>
-        <p class="thesis">Capter l'attention, la transformer en clients, et automatiser avec l'IA tout ce qui peut l'être.</p>
-        <p class="open">Neuf ans entre médias et marketing. J'ai piloté la publicité, le contenu et les données de six marques, et je construis aujourd'hui des agents IA. Ouvert à tous les secteurs.</p>
+        <p class="role">Digital Marketing Manager<span>Performance &amp; IA</span></p>
+        <p class="thesis">Je crée des systèmes d'acquisition qui amènent des clients, et j'automatise avec l'IA ce qui ralentit les équipes.</p>
+        <p class="open">Chez BYmyCAR Suisse, j'ai lancé de zéro l'acquisition digitale de six marques, avec des leads à environ 15 € pièce. Neuf ans entre médias et marketing, et des agents IA déjà en production.</p>
         <div class="actions">
           <a class="btn primary tel" href="tel:+41767768044">+41 76 776 80 44</a>
           <a class="btn" href="#suite">Me contacter</a>
@@ -355,24 +72,55 @@
       </div>
       <div class="skills">
         <div class="skill">
-          <h3>Publicité digitale</h3>
-          <p>Campagnes d'acquisition pour six marques, 270 000 CHF de budgets marketing par an.</p>
+          <h3>Acquisition et publicité</h3>
+          <p>Mise en place de zéro des campagnes de six marques, 270 000 CHF de budgets marketing par an.</p>
           <ul class="tools"><li>Meta Ads</li><li>Google Ads · Performance Max</li></ul>
         </div>
         <div class="skill">
-          <h3>Données et pilotage</h3>
-          <p>Suivi des leads et des KPI marketing et ventes, méthode test &amp; learn, segmentation de bases clients.</p>
+          <h3>Données et performance</h3>
+          <p>Suivi du coût par lead et du coût par vente, méthode test &amp; learn, segmentation de bases clients.</p>
           <ul class="tools"><li>Salesforce</li><li>Marketing Cloud</li></ul>
         </div>
         <div class="skill">
           <h3>IA et automatisation</h3>
-          <p>Agents IA sur mesure qui prennent en charge un processus complet, du tri de l'information à la production.</p>
+          <p>Agents IA sur mesure qui prennent en charge un processus complet, avec une validation humaine aux étapes clés.</p>
           <ul class="tools"><li>n8n</li><li>API Claude</li><li>ChatGPT</li></ul>
         </div>
         <div class="skill">
-          <h3>Contenu et marque</h3>
-          <p>Rédaction et SEO, vidéo face caméra, direction artistique des campagnes, événementiel.</p>
+          <h3>Création et contenu</h3>
+          <p>Visuels de campagne conçus moi-même, vidéo face caméra, rédaction et SEO.</p>
           <ul class="tools"><li>Photoshop</li><li>Canva</li><li>CapCut</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="transfer" aria-labelledby="tr-title">
+    <div class="wrap">
+      <div class="transfer-head">
+        <h2 id="tr-title">L'automobile, un terrain d'entraînement exigeant</h2>
+        <p>Mes résultats viennent de l'automobile. Les problèmes que j'y ai résolus sont ceux de nombreux secteurs à Genève et dans le canton de Vaud.</p>
+      </div>
+      <div class="transfer-grid">
+        <div class="tr">
+          <h3>Un achat important, une décision longue</h3>
+          <p>Rassurer, relancer et convertir sur rendez-vous un client qui compare pendant des semaines.</p>
+          <span class="to">Immobilier · Banque privée · Horlogerie · Services B2B</span>
+        </div>
+        <div class="tr">
+          <h3>Plusieurs marques, un seul budget</h3>
+          <p>Arbitrer chaque mois entre six marques aux cibles différentes, selon leurs résultats.</p>
+          <span class="to">Groupes de luxe · Agences · Portefeuilles de produits</span>
+        </div>
+        <div class="tr">
+          <h3>Du digital au point de vente</h3>
+          <p>Transformer une campagne en ligne en visites et en ventes dans un réseau de sites physiques.</p>
+          <span class="to">Retail · Santé · Hôtellerie · Réseaux d'agences</span>
+        </div>
+        <div class="tr">
+          <h3>Partir de zéro</h3>
+          <p>Construire un système d'acquisition là où il n'existait aucune campagne.</p>
+          <span class="to">Scale-ups · PME en croissance · Nouveaux marchés</span>
         </div>
       </div>
     </div>
@@ -385,32 +133,13 @@
         <h2>Apprendre à capter l'attention</h2>
       </div>
       <div class="story">
-        <p>Tout commence dans les rédactions de Motor1, d'InsideEVs France puis de M6 Turbo. J'y écris de tout, de la brève d'actualité à l'essai long et détaillé, et je présente face caméra.</p>
-        <p>J'y apprends aussi à lire les chiffres : audience, référencement, engagement d'une communauté de plus de <strong>125 000 abonnés</strong>. Savoir ce qui retient un public, quel que soit le produit, devient la base de tout le reste.</p>
+        <p>Journaliste chez Motor1, InsideEVs France puis M6 Turbo : des milliers d'articles, de la brève à l'essai long et détaillé, pensés pour le référencement, des vidéos face caméra, et une communauté de plus de <strong>125 000 abonnés</strong> dont je suivais l'engagement.</p>
       </div>
-
-      <div class="block">
-        <div class="block-head"><h4>Trois articles</h4><p>Essai, actualité, enquête</p></div>
-        <div class="articles">
-          <a class="article" href="https://fr.motor1.com/reviews/535179/essai-mclaren-720s-2021-video/" target="_blank" rel="noopener">
-            <span class="label">Motor1 · 2021</span>
-            <span class="t">Essai McLaren 720S, la supercar de l'extrême</span>
-            <span class="go">Lire ↗</span>
-          </a>
-          <a class="article" href="https://www.turbo.fr/actualite-automobile/video-ne-peut-pas-faire-plus-idiot-que-ce-gars-192722" target="_blank" rel="noopener">
-            <span class="label">Turbo.fr</span>
-            <span class="t">Contrôlé à 109 km/h au lieu de 50 km/h, le commissaire ne sera pas sanctionné</span>
-            <span class="go">Lire ↗</span>
-          </a>
-          <a class="article" href="https://www.autoplus.fr/actualite/la-r8-a-tellement-de-succes-quaudi-prolonge-sa-production-1312752.html" target="_blank" rel="noopener">
-            <span class="label">Auto Plus</span>
-            <span class="t">La R8 a tellement de succès qu'Audi prolonge sa production</span>
-            <span class="go">Lire ↗</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="lesson"><span class="label">Ce que j'en garde</span><p>Écrire pour un public exigeant, de la brève à l'essai détaillé, et tenir un rythme élevé sans baisser le niveau.</p></div>
+      <a class="press" href="https://fr.motor1.com/reviews/535179/essai-mclaren-720s-2021-video/" target="_blank" rel="noopener">
+        <span><span class="label">Essai · Motor1 · 2021</span><span class="t">McLaren 720S, la supercar de l'extrême</span></span>
+        <span class="go">Lire ↗</span>
+      </a>
+      <p class="press-more">Autres publications : <a href="https://www.turbo.fr/actualite-automobile/video-ne-peut-pas-faire-plus-idiot-que-ce-gars-192722" target="_blank" rel="noopener">Turbo.fr</a> · <a href="https://www.autoplus.fr/actualite/la-r8-a-tellement-de-succes-quaudi-prolonge-sa-production-1312752.html" target="_blank" rel="noopener">Auto Plus</a></p>
     </div>
   </section>
 
@@ -421,68 +150,94 @@
         <h2>Transformer l'attention en clients</h2>
       </div>
       <div class="story">
-        <p>En 2024, je passe de l'autre côté. Chez BYmyCAR Suisse, groupe de distribution présent de Gland à Meyrin, je prends en charge le marketing digital de six marques : Peugeot, Citroën, DS, Opel, Ford et BYD.</p>
-        <p>Je pilote <strong>270 000 CHF de budgets marketing par an</strong>, diffusés sur Meta Ads et sur Google Ads avec Performance Max. Chaque campagne est suivie au lead près : celles qui performent sont reconduites le mois suivant, les autres sont coupées.</p>
+        <p>Chez BYmyCAR Suisse, groupe de distribution présent de Gland à Meyrin, je prends en charge le marketing digital de six marques : Peugeot, Citroën, DS, Opel, Ford et BYD, avec <strong>270 000 CHF de budgets marketing par an</strong>.</p>
       </div>
 
-      <div class="results">
-        <div class="result"><div class="big">270 000<small>CHF</small></div><h4>Budgets annuels</h4><p>Répartis sur six marques, entre Meta Ads et Google Ads Performance Max.</p></div>
-        <div class="result"><div class="big">30 – 70</div><h4>Leads par campagne</h4><p>Selon la marque. Les campagnes performantes sont reconduites, les autres coupées.</p></div>
-        <div class="result"><div class="big">≈ 40</div><h4>Ventes par vente privée</h4><p>Chaque mois. Segmentation de la base clients et pilotage du ciblage par IA du prestataire.</p></div>
-        <div class="result"><div class="big">400+</div><h4>Invités au lancement</h4><p>Nouvelle Peugeot 3008 dans quatre concessions, et environ 150 professionnels pour Ford.</p></div>
+      <article class="case" aria-labelledby="case-title">
+        <div class="case-top">
+          <span class="label">Étude de cas</span>
+          <h3 id="case-title">Créer de zéro l'acquisition digitale d'un groupe multimarques</h3>
+          <p>Le même dispositif s'applique à tout produit qui se vend sur rendez-vous.</p>
+        </div>
+        <div class="case-body">
+          <div class="case-row">
+            <span class="label">Point de départ</span>
+            <div><p>À mon arrivée, aucune campagne ne tournait. Les vendeurs attendaient les demandes qui arrivaient d'elles-mêmes par le site internet.</p></div>
+          </div>
+          <div class="case-row">
+            <span class="label">Ce que j'ai mis en place</span>
+            <ol class="steps">
+              <li>Une campagne « fil rouge » par marque, sur Meta Ads et sur Google Ads avec Performance Max.</li>
+              <li>Des campagnes ciblées sur les offres du moment, par exemple la Peugeot 208 à 208 CHF par mois sans apport.</li>
+              <li>Les visuels, que je crée sur Canva et Photoshop pour chaque format.</li>
+              <li>Les leads, envoyés dans Salesforce puis attribués aux vendeurs.</li>
+              <li>Chaque mois, je reconduis les campagnes qui performent et je coupe les autres.</li>
+            </ol>
+          </div>
+          <div class="case-row">
+            <span class="label">Résultats</span>
+            <div>
+              <div class="metrics">
+                <div class="metric"><div class="v">≈ 70</div><div class="k">leads pour les meilleures campagnes</div></div>
+                <div class="metric"><div class="v">≈ 15 €</div><div class="k">coût par lead sur Meta Ads</div></div>
+                <div class="metric"><div class="v">3 – 4</div><div class="k">ventes par campagne</div></div>
+                <div class="metric"><div class="v">≈ 5 %</div><div class="k">des leads transformés en ventes</div></div>
+                <div class="metric"><div class="v">≈ 300 €</div><div class="k">de publicité par vente</div></div>
+              </div>
+              <div class="funnel" aria-label="Sur une campagne : environ 70 leads, puis 3 à 4 ventes">
+                <div class="fbar"><span class="label">Leads</span><div class="track"><div class="fill" style="width:100%"></div><span class="val lead-val">≈ 70</span></div></div>
+                <div class="fbar"><span class="label">Ventes</span><div class="track"><div class="fill sales" style="width:5%"></div><span class="val" style="--w:5%">3 – 4</span></div></div>
+              </div>
+              <p class="note">Mesure prudente : les vendeurs ne renseignent pas toutes leurs ventes dans le CRM, donc le nombre réel de ventes est sans doute plus élevé.</p>
+            </div>
+          </div>
+          <div class="case-row">
+            <span class="label">Ce que j'en retiens</span>
+            <div><p>La prochaine marge de progression se trouve dans le suivi : avec un CRM complet, chaque franc dépensé peut être relié à une vente, et le budget va directement aux campagnes les plus rentables.</p></div>
+          </div>
+        </div>
+      </article>
+
+      <div class="pair">
+        <div class="card">
+          <span class="label">Ventes privées, chaque mois</span>
+          <div class="v">≈ 40</div>
+          <h3>ventes par vente privée</h3>
+          <p>Un résultat collectif, avec les équipes de vente et le prestataire Absolute Results. <strong>Mon rôle :</strong> segmenter la base clients, par exemple les fins de leasing, et fournir au prestataire des listes qualifiées.</p>
+        </div>
+        <div class="card">
+          <span class="label">Événements</span>
+          <div class="v">400+</div>
+          <h3>invités au lancement d'un modèle</h3>
+          <p>Lancement de la nouvelle Peugeot 3008 dans quatre concessions, et environ 150 professionnels réunis pour la gamme utilitaire Ford. Organisation de bout en bout, prestataires et campagnes de trafic compris.</p>
+        </div>
       </div>
 
       <div class="block">
-        <div class="block-head"><h4>Les campagnes</h4><p>Visuels conçus pour les réseaux sociaux et l'affichage. Cliquez pour agrandir.</p></div>
-        <div class="gallery">
-          <h4>Ventes privées et offres</h4>
-          <div class="strip">
-            <button type="button" data-cap="Ventes privées Peugeot"><img src="media/visuels/vp-peugeot.jpg" alt="Affiche ventes privées Peugeot" loading="lazy" width="1000" height="1000"></button>
-            <button type="button" data-cap="Ventes privées Citroën, Meyrin"><img src="media/visuels/vp-citroen-meyrin.jpg" alt="Affiche ventes privées Citroën BYmyCAR Meyrin" loading="lazy" width="1000" height="1000"></button>
-            <button type="button" data-cap="Vente privée Gland et Bussigny"><img src="media/visuels/vp-gland-bussigny.jpg" alt="Post vente privée Gland et Bussigny" loading="lazy" width="1000" height="1000"></button>
-            <button type="button" data-cap="Offre spéciale multi-marques"><img src="media/visuels/offre-speciale.jpg" alt="Post offre spéciale jusqu'à moins 27 pour cent" loading="lazy" width="1000" height="1000"></button>
-            <button type="button" data-cap="Carte grise offerte"><img src="media/visuels/carte-grise-offerte.jpg" alt="Post carte grise offerte" loading="lazy" width="1000" height="1000"></button>
-            <button type="button" data-cap="Nouvelle Citroën C4"><img src="media/visuels/citroen-c4.jpg" alt="Post nouvelle Citroën C4 dès 23 900 francs" loading="lazy" width="1000" height="1000"></button>
-            <button type="button" data-cap="Fiat 500e"><img src="media/visuels/fiat-500e.jpg" alt="Post Fiat 500e" loading="lazy" width="1000" height="1000"></button>
-            <button type="button" class="tall" data-cap="Affiche après-vente, traitements Innotec"><img src="media/visuels/affiche-sav.jpg" alt="Affiche après-vente BYmyCAR, traitements carrosserie et vitres" loading="lazy" width="707" height="1000"></button>
-          </div>
-        </div>
-        <div class="gallery">
-          <h4>Carrousels de loyers</h4>
-          <div class="strip">
-            <button type="button" data-cap="Carrousel Peugeot : 208"><img src="media/visuels/loyers-peugeot-208.jpg" alt="Slide loyer Peugeot 208" loading="lazy" width="1000" height="1000"></button>
-            <button type="button" data-cap="Carrousel Peugeot : 2008"><img src="media/visuels/loyers-peugeot-2008.jpg" alt="Slide loyer Peugeot 2008" loading="lazy" width="1000" height="1000"></button>
-            <button type="button" data-cap="Carrousel Peugeot : 308"><img src="media/visuels/loyers-peugeot-308.jpg" alt="Slide loyer Peugeot 308" loading="lazy" width="1000" height="1000"></button>
-            <button type="button" data-cap="Carrousel Peugeot : 3008"><img src="media/visuels/loyers-peugeot-3008.jpg" alt="Slide loyer Peugeot 3008" loading="lazy" width="1000" height="1000"></button>
-            <button type="button" data-cap="Carrousel Peugeot : 5008"><img src="media/visuels/loyers-peugeot-5008.jpg" alt="Slide loyer Peugeot 5008" loading="lazy" width="1000" height="1000"></button>
-            <button type="button" data-cap="Carrousel Peugeot : 408"><img src="media/visuels/loyers-peugeot-408.jpg" alt="Slide loyer Peugeot 408" loading="lazy" width="1000" height="1000"></button>
-            <button type="button" data-cap="Carrousel Citroën : C3"><img src="media/visuels/loyers-citroen-c3.jpg" alt="Slide loyer Citroën C3" loading="lazy" width="1000" height="1000"></button>
-            <button type="button" data-cap="Carrousel Citroën : C3 Aircross"><img src="media/visuels/loyers-citroen-c3-aircross.jpg" alt="Slide loyer Citroën C3 Aircross" loading="lazy" width="1000" height="1000"></button>
-            <button type="button" data-cap="Carrousel Citroën : C4"><img src="media/visuels/loyers-citroen-c4.jpg" alt="Slide loyer Citroën C4" loading="lazy" width="1000" height="1000"></button>
-            <button type="button" data-cap="Carrousel Citroën : C5 Aircross"><img src="media/visuels/loyers-citroen-c5-aircross.jpg" alt="Slide loyer Citroën C5 Aircross" loading="lazy" width="1000" height="1000"></button>
-          </div>
+        <div class="block-head"><h4>Créations</h4><p>Conçues moi-même sur Canva et Photoshop. Cliquez pour agrandir.</p></div>
+        <div class="strip">
+          <button type="button" data-cap="Affiche ventes privées Peugeot"><img src="media/visuels/vp-peugeot.jpg" alt="Affiche ventes privées Peugeot" loading="lazy" width="1000" height="1000"></button>
+          <button type="button" data-cap="Post offre spéciale multimarques"><img src="media/visuels/offre-speciale.jpg" alt="Post offre spéciale jusqu'à moins 27 pour cent" loading="lazy" width="1000" height="1000"></button>
+          <button type="button" data-cap="Carrousel de loyers, slide Peugeot 208"><img src="media/visuels/loyers-peugeot-208.jpg" alt="Slide de carrousel loyer Peugeot 208" loading="lazy" width="1000" height="1000"></button>
+          <button type="button" data-cap="Affiche ventes privées Citroën, Meyrin"><img src="media/visuels/vp-citroen-meyrin.jpg" alt="Affiche ventes privées Citroën BYmyCAR Meyrin" loading="lazy" width="1000" height="1000"></button>
+          <button type="button" data-cap="Post carte grise offerte"><img src="media/visuels/carte-grise-offerte.jpg" alt="Post carte grise offerte" loading="lazy" width="1000" height="1000"></button>
+          <button type="button" data-cap="Post lancement nouvelle Citroën C4"><img src="media/visuels/citroen-c4.jpg" alt="Post nouvelle Citroën C4 dès 23 900 francs" loading="lazy" width="1000" height="1000"></button>
         </div>
       </div>
 
       <div class="block">
-        <div class="block-head"><h4>Les vidéos</h4><p>Écrites, tournées, montées et présentées face caméra</p></div>
+        <div class="block-head"><h4>Vidéos</h4><p>Écrites, tournées, montées et présentées face caméra</p></div>
         <div class="videos">
           <div>
             <div class="phone"><video controls playsinline preload="none" poster="media/essai-peugeot-3008.jpg" src="media/essai-peugeot-3008.mp4" aria-label="Vidéo : essai Peugeot 3008"></video></div>
-            <div class="video-meta"><span class="label">1:16 · Reels</span><h3>Essai Peugeot 3008</h3><p>Essai face caméra.</p></div>
-          </div>
-          <div>
-            <div class="phone"><video controls playsinline preload="none" poster="media/presentation-peugeot-5008.jpg" src="media/presentation-peugeot-5008.mp4" aria-label="Vidéo : présentation Peugeot 5008"></video></div>
-            <div class="video-meta"><span class="label">1:23 · Reels</span><h3>Présentation Peugeot 5008</h3><p>Présentation du modèle.</p></div>
+            <div class="video-meta"><span class="label">1:16 · Reels</span><h3>Essai Peugeot 3008</h3></div>
           </div>
           <div>
             <div class="phone"><video controls playsinline preload="none" poster="media/presentation-ford-bronco.jpg" src="media/presentation-ford-bronco.mp4" aria-label="Vidéo : présentation Ford Bronco"></video></div>
-            <div class="video-meta"><span class="label">1:38 · Reels</span><h3>Présentation Ford Bronco</h3><p>Présentation du tout-terrain.</p></div>
+            <div class="video-meta"><span class="label">1:38 · Reels</span><h3>Présentation Ford Bronco</h3></div>
           </div>
         </div>
       </div>
-
-      <div class="lesson"><span class="label">Ce que j'en garde</span><p>Une campagne se juge sur ses chiffres. Et chaque heure passée sur une tâche répétitive est une heure de moins pour la stratégie.</p></div>
     </div>
   </section>
 
@@ -490,19 +245,18 @@
     <div class="wrap">
       <div class="chapter-head">
         <p class="label"><span class="rn">III</span>Intelligence artificielle · 2026</p>
-        <h2>Mettre l'IA au service de l'entreprise</h2>
+        <h2>Confier à l'IA le travail répétitif</h2>
       </div>
       <div class="story">
-        <p>Je me forme à l'IA et je l'applique d'abord à mon propre travail. Ma veille et ma rédaction prenaient cinq heures par session : une heure pour trouver les sujets, quatre pour les écrire.</p>
-        <p>Je construis sur n8n deux agents reliés, avec une validation humaine au milieu. <strong>La même session prend désormais une heure.</strong> La méthode, elle, s'applique à n'importe quel service de l'entreprise.</p>
+        <p>Ma veille et la production de premiers jets prenaient cinq heures par session. J'ai construit sur n8n deux agents reliés, avec une validation humaine au milieu. <strong>La même session prend désormais une heure.</strong></p>
       </div>
 
       <article class="project">
         <div class="project-head">
           <div>
-            <span class="label">Projet réalisé</span>
-            <h3 style="margin-top:8px">Système de veille et de rédaction</h3>
-            <p>L'IA fait la collecte, le tri et le premier jet. Je choisis les sujets et je relis. Quand une source n'est pas lisible, l'agent s'arrête et le signale au lieu d'inventer.</p>
+            <span class="label">Projet en production</span>
+            <h3>Agents de veille et de synthèse</h3>
+            <p>L'IA collecte, trie et rédige un premier jet à partir des sources. Je choisis les sujets, je vérifie et je relis avant toute publication. Quand une source est illisible, l'agent s'arrête et le signale au lieu d'inventer.</p>
           </div>
           <div class="gain">
             <span class="label">Temps par session</span>
@@ -516,26 +270,26 @@
             <h3>Veille</h3>
             <ol>
               <li>Lit dans Google Sheets les sujets déjà prévus par l'équipe et l'historique</li>
-              <li>Collecte l'actualité des sources via leurs flux RSS</li>
+              <li>Collecte les actualités des sources via leurs flux RSS</li>
               <li>Retire les doublons et ce qui a déjà été traité</li>
-              <li>Claude analyse l'actualité par lots, puis sélectionne les meilleurs sujets</li>
+              <li>Claude analyse les actualités par lots et sélectionne les plus pertinentes</li>
               <li>Envoie la sélection par email et met à jour l'historique</li>
             </ol>
           </div>
           <div class="handoff" aria-label="Validation humaine entre les deux agents">
             <div class="road" aria-hidden="true"></div>
             <div class="you">Je valide</div>
-            <small>Choix des sujets à rédiger</small>
+            <small>Choix des sujets</small>
           </div>
           <div class="stage">
             <span class="label">Agent 2</span>
-            <h3>Rédaction</h3>
+            <h3>Synthèse</h3>
             <ol>
               <li>Se déclenche par webhook et lit les sujets validés</li>
-              <li>Récupère le texte de l'article source sur le web</li>
-              <li>Page illisible : marque le sujet <em>texte à coller</em> et s'arrête</li>
-              <li>Sinon, envoie la source à l'API Claude avec les consignes de mise en forme</li>
-              <li>Crée l'article dans Google Docs et le marque comme rédigé</li>
+              <li>Récupère le texte de la source sur le web</li>
+              <li>Source illisible : marque le sujet <em>à compléter</em> et s'arrête</li>
+              <li>Sinon, l'API Claude rédige un premier jet selon la charte éditoriale</li>
+              <li>Crée le document dans Google Docs pour relecture</li>
             </ol>
           </div>
         </div>
@@ -544,18 +298,20 @@
 
         <div class="shots">
           <figure>
-            <div class="shot"><img src="media/n8n-veille.jpg" alt="Workflow n8n de l'agent de veille : lecture Google Sheets, flux RSS, nettoyage, boucle d'analyse par Claude, sélection IA, envoi Gmail, enregistrement de l'historique" loading="lazy" width="2099" height="511"></div>
+            <div class="shot"><img src="media/n8n-veille.jpg" alt="Workflow n8n de l'agent de veille : lecture Google Sheets, flux RSS, nettoyage, boucle d'analyse par Claude, sélection, envoi Gmail, enregistrement de l'historique" loading="lazy" width="2099" height="511"></div>
             <figcaption>Agent 1 dans n8n : collecte, analyse par lots avec pause entre les appels, sélection et envoi.</figcaption>
           </figure>
           <figure>
-            <div class="shot"><img src="media/n8n-redaction.jpg" alt="Workflow n8n de l'agent de rédaction : webhook, lecture des sujets validés, lecture de la page source, condition texte disponible, requête à l'API Claude, création du Google Doc" loading="lazy" width="2147" height="640"></div>
-            <figcaption>Agent 2 dans n8n : la branche du bas gère les sources illisibles, celle du haut appelle l'API Claude et écrit le document.</figcaption>
+            <div class="shot"><img src="media/n8n-redaction.jpg" alt="Workflow n8n de l'agent de synthèse : webhook, lecture des sujets validés, lecture de la source, condition texte disponible, requête à l'API Claude, création du Google Doc" loading="lazy" width="2147" height="640"></div>
+            <figcaption>Agent 2 dans n8n : la branche du bas gère les sources illisibles, celle du haut appelle l'API Claude et crée le document.</figcaption>
           </figure>
         </div>
       </article>
 
+      <p class="transpose">Le même principe sert à la veille concurrentielle, à la synthèse de documents ou au reporting.</p>
+
       <div class="block">
-        <div class="block-head"><h4>Ma méthode, pour n'importe quel service</h4><p>La même démarche que pour l'agent de veille</p></div>
+        <div class="block-head"><h4>Ma méthode</h4><p>Celle que j'ai suivie pour ces deux agents</p></div>
         <ol class="method">
           <li><h4>Partir du métier</h4><p>Observer le processus réel, mesurer le temps qu'il prend et repérer les étapes répétitives.</p></li>
           <li><h4>Choisir le bon outil</h4><p>Utiliser l'IA là où elle apporte quelque chose, et un workflow classique quand il est plus fiable.</p></li>
@@ -563,26 +319,6 @@
           <li><h4>Garder la main</h4><p>Placer une validation humaine aux étapes clés et mesurer le gain obtenu.</p></li>
         </ol>
       </div>
-
-      <div class="block">
-        <div class="block-head"><h4>Exemples d'agents possibles</h4><p>Ce que la même méthode permet de construire</p></div>
-        <div class="uses">
-          <div class="use"><h4>Marketing</h4><p>Analyse hebdomadaire des campagnes et recommandations de budget.</p></div>
-          <div class="use"><h4>Ventes</h4><p>Préparation des relances et synthèse des comptes avant un rendez-vous.</p></div>
-          <div class="use"><h4>Service client</h4><p>Tri des demandes entrantes et propositions de réponses à valider.</p></div>
-          <div class="use"><h4>Direction</h4><p>Reporting automatique à partir des outils de l'entreprise.</p></div>
-        </div>
-      </div>
-
-      <div class="next">
-        <span class="tag">En construction</span>
-        <div>
-          <h3>Agent analyste marketing</h3>
-          <p>Il lit les exports publicitaires et CRM, calcule les indicateurs et rédige chaque semaine une note de recommandations. Vous pourrez bientôt l'essayer ici, sur des données d'exemple.</p>
-        </div>
-      </div>
-
-      <div class="lesson"><span class="label">Ce que j'en retiens</span><p>L'IA est utile quand elle part d'un vrai processus, et que l'humain garde la main sur les décisions.</p></div>
     </div>
   </section>
 
@@ -590,13 +326,13 @@
     <div class="wrap finale-grid">
       <div>
         <div class="chapter-head">
-          <p class="label"><span class="rn">IV</span>La suite</p>
-          <h2>Écrivons le prochain chapitre ensemble</h2>
+          <p class="label"><span class="rn">IV</span>Contact</p>
+          <h2>Parlons de votre équipe</h2>
         </div>
-        <p class="intro">Je cherche un poste où le marketing, les données et l'IA se rencontrent, dans le secteur qui me fera confiance. J'arrive avec des réflexes de journaliste, l'exigence de résultats d'un marketeur, et des agents qui tournent déjà.</p>
+        <p class="intro">Je cherche un poste de marketing digital où les résultats se mesurent et où l'IA fait partie du métier, dans le secteur qui en a besoin, à Genève ou dans le canton de Vaud.</p>
         <div class="actions">
           <a class="btn primary tel" href="tel:+41767768044">Appeler</a>
-          <button class="btn" type="button" id="copy">Copier l'email</button>
+          <button class="btn" type="button" id="copy" data-done="Email copié" data-selected="Email sélectionné">Copier l'email</button>
           <a class="btn" href="https://www.linkedin.com/in/khalilbouguerra/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
@@ -605,6 +341,7 @@
         <div><dt>Email</dt><dd id="mail">b.khalil@outlook.com</dd></div>
         <div><dt>Région</dt><dd>Genève, La Côte, ou Lausanne en partie à distance</dd></div>
         <div><dt>Disponibilité</dt><dd>Dès décembre 2026, à 90 ou 100 %</dd></div>
+        <div><dt>Langues</dt><dd>Français, arabe, anglais</dd></div>
         <div><dt>Statut</dt><dd>Frontalier, permis G</dd></div>
       </dl>
     </div>
@@ -621,58 +358,6 @@
   <p id="lb-cap"></p>
 </dialog>
 
-<script>
-  (function () {
-    var dlg = document.getElementById('lightbox');
-    var img = document.getElementById('lb-img');
-    var cap = document.getElementById('lb-cap');
-    document.querySelectorAll('.strip button').forEach(function (b) {
-      b.addEventListener('click', function () {
-        var src = b.querySelector('img');
-        img.src = src.src; img.alt = src.alt; cap.textContent = b.dataset.cap || '';
-        if (dlg.showModal) dlg.showModal();
-      });
-    });
-    document.getElementById('lb-close').addEventListener('click', function () { dlg.close(); });
-    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
-
-    var copy = document.getElementById('copy');
-    copy.addEventListener('click', function () {
-      var el = document.getElementById('mail');
-      var done = function () { copy.textContent = 'Email copié'; setTimeout(function () { copy.textContent = "Copier l'email"; }, 2200); };
-      var fallback = function () {
-        var r = document.createRange(); r.selectNodeContents(el);
-        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
-        copy.textContent = 'Email sélectionné';
-      };
-      try { navigator.clipboard.writeText(el.textContent).then(done, fallback); } catch (e) { fallback(); }
-    });
-
-    var vids = document.querySelectorAll('video');
-    vids.forEach(function (v) { v.addEventListener('play', function () { vids.forEach(function (o) { if (o !== v) o.pause(); }); }); });
-
-    var ids = ['expertise', 'raconter', 'vendre', 'automatiser', 'suite'];
-    var secs = ids.map(function (id) { return document.getElementById(id); });
-    var links = document.querySelectorAll('[data-k]');
-    var fill = document.querySelector('.rail .fill');
-    var ticking = false;
-    function update() {
-      ticking = false;
-      var mid = window.innerHeight * 0.4, current = -1;
-      secs.forEach(function (s, i) { if (s.getBoundingClientRect().top <= mid) current = i; });
-      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) current = ids.length - 1;
-      links.forEach(function (a) {
-        var i = ids.indexOf(a.dataset.k);
-        a.setAttribute('aria-current', i === current ? 'true' : 'false');
-        a.classList.toggle('passed', current >= 0 && i < current);
-      });
-      if (fill) fill.style.setProperty('--p', Math.max(current, 0) / (ids.length - 1));
-    }
-    window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
-    window.addEventListener('resize', update);
-    update();
-  })();
-</script>
-
+<script src="site.js"></script>
 </body>
 </html>

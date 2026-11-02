@@ -263,6 +263,12 @@ figure { margin: 0; min-width: 0; }
 .shot img { max-width: none; width: 1100px; height: auto; }
 @media (min-width: 1000px) { .shot img { width: 100%; max-width: 100%; } }
 .shots figcaption { font-size: 14px; color: var(--ink-soft); margin-top: 10px; }
+.try { display: grid; gap: 8px; margin-top: 32px; padding: 30px 34px; background: #1e4636; color: #f4f2ec; text-decoration: none; max-width: 760px; transition: background .2s; }
+.try:hover { background: #173a2c; }
+.try .label { color: rgba(244, 242, 236, 0.7); }
+.try-t { font-family: var(--font-display); font-weight: 500; font-size: clamp(26px, 3vw, 34px); line-height: 1.15; }
+.try-d { font-weight: 300; font-size: 16.5px; max-width: 56ch; color: rgba(244, 242, 236, 0.9); }
+.try-go { margin-top: 8px; font-size: 13px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #d4b97e; }
 .transpose { margin: 28px 0 0; font-family: var(--font-display); font-size: 24px; line-height: 1.35; max-width: 46ch; }
 
 .method { margin-top: 28px; list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); counter-reset: m; border-top: 1px solid var(--gold); }

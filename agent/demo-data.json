@@ -1,0 +1,448 @@
+{
+ "ecommerce": {
+  "id": "ecommerce",
+  "name": "Maison Alpine",
+  "sector": {
+   "fr": "E-commerce · décoration",
+   "en": "E-commerce · home decor"
+  },
+  "city": "Lausanne",
+  "pitch": {
+   "fr": "Boutique en ligne de décoration, 2 canaux payants et une newsletter.",
+   "en": "Online home decor shop, 2 paid channels and a newsletter."
+  },
+  "currency": "CHF",
+  "labels": {
+   "conversions": {
+    "fr": "commandes",
+    "en": "orders"
+   },
+   "revenue": {
+    "fr": "chiffre d'affaires",
+    "en": "revenue"
+   }
+  },
+  "ads": [
+   {
+    "month": "2026-08",
+    "channel": "Meta Ads",
+    "spend": 6000,
+    "impressions": 520000,
+    "clicks": 7800,
+    "frequency": 1.9,
+    "conversions": 210,
+    "revenue": 25200
+   },
+   {
+    "month": "2026-09",
+    "channel": "Meta Ads",
+    "spend": 6200,
+    "impressions": 560000,
+    "clicks": 7300,
+    "frequency": 2.6,
+    "conversions": 190,
+    "revenue": 22400
+   },
+   {
+    "month": "2026-10",
+    "channel": "Meta Ads",
+    "spend": 6400,
+    "impressions": 610000,
+    "clicks": 6400,
+    "frequency": 3.4,
+    "conversions": 150,
+    "revenue": 17300
+   },
+   {
+    "month": "2026-08",
+    "channel": "Google Ads · Performance Max",
+    "spend": 5000,
+    "impressions": 300000,
+    "clicks": 9000,
+    "conversions": 240,
+    "revenue": 28800
+   },
+   {
+    "month": "2026-09",
+    "channel": "Google Ads · Performance Max",
+    "spend": 5100,
+    "impressions": 310000,
+    "clicks": 9300,
+    "conversions": 255,
+    "revenue": 30600
+   },
+   {
+    "month": "2026-10",
+    "channel": "Google Ads · Performance Max",
+    "spend": 5200,
+    "impressions": 320000,
+    "clicks": 9700,
+    "conversions": 270,
+    "revenue": 33500
+   }
+  ],
+  "email": [
+   {
+    "month": "2026-08",
+    "campaign": "Newsletter",
+    "sent": 42000,
+    "opened": 15500,
+    "clicked": 1850,
+    "conversions": 120,
+    "revenue": 11800
+   },
+   {
+    "month": "2026-09",
+    "campaign": "Newsletter",
+    "sent": 43000,
+    "opened": 15200,
+    "clicked": 1700,
+    "conversions": 105,
+    "revenue": 10100
+   },
+   {
+    "month": "2026-10",
+    "campaign": "Newsletter",
+    "sent": 44000,
+    "opened": 15400,
+    "clicked": 2100,
+    "conversions": 140,
+    "revenue": 14200
+   }
+  ],
+  "site": [
+   {
+    "month": "2026-08",
+    "sessions": 61000,
+    "conversions": 640,
+    "sessions_mobile": 41000,
+    "conversions_mobile": 300
+   },
+   {
+    "month": "2026-09",
+    "sessions": 62500,
+    "conversions": 610,
+    "sessions_mobile": 43500,
+    "conversions_mobile": 270
+   },
+   {
+    "month": "2026-10",
+    "sessions": 64000,
+    "conversions": 630,
+    "sessions_mobile": 46000,
+    "conversions_mobile": 255
+   }
+  ]
+ },
+ "saas": {
+  "id": "saas",
+  "name": "Planifia",
+  "sector": {
+   "fr": "SaaS B2B · logiciel RH",
+   "en": "B2B SaaS · HR software"
+  },
+  "city": "Genève",
+  "pitch": {
+   "fr": "Logiciel de planning pour PME, 3 canaux payants, une séquence email et un CRM.",
+   "en": "Scheduling software for SMEs, 3 paid channels, an email sequence and a CRM."
+  },
+  "currency": "CHF",
+  "labels": {
+   "conversions": {
+    "fr": "demandes de démo",
+    "en": "demo requests"
+   },
+   "revenue": {
+    "fr": "nouvel ARR",
+    "en": "new ARR"
+   }
+  },
+  "ads": [
+   {
+    "month": "2026-08",
+    "channel": "LinkedIn Ads",
+    "spend": 7000,
+    "impressions": 180000,
+    "clicks": 1100,
+    "conversions": 70,
+    "qualified": 31,
+    "won": 5,
+    "revenue": 54000
+   },
+   {
+    "month": "2026-09",
+    "channel": "LinkedIn Ads",
+    "spend": 7200,
+    "impressions": 186000,
+    "clicks": 1150,
+    "conversions": 74,
+    "qualified": 33,
+    "won": 6,
+    "revenue": 66000
+   },
+   {
+    "month": "2026-10",
+    "channel": "LinkedIn Ads",
+    "spend": 7000,
+    "impressions": 178000,
+    "clicks": 1080,
+    "conversions": 72,
+    "qualified": 34,
+    "won": 6,
+    "revenue": 63000
+   },
+   {
+    "month": "2026-08",
+    "channel": "Google Ads · Search",
+    "spend": 4500,
+    "impressions": 61000,
+    "clicks": 2600,
+    "conversions": 95,
+    "qualified": 30,
+    "won": 4,
+    "revenue": 38000
+   },
+   {
+    "month": "2026-09",
+    "channel": "Google Ads · Search",
+    "spend": 4600,
+    "impressions": 63000,
+    "clicks": 2700,
+    "conversions": 101,
+    "qualified": 31,
+    "won": 4,
+    "revenue": 40000
+   },
+   {
+    "month": "2026-10",
+    "channel": "Google Ads · Search",
+    "spend": 4800,
+    "impressions": 66000,
+    "clicks": 2900,
+    "conversions": 110,
+    "qualified": 35,
+    "won": 5,
+    "revenue": 47000
+   },
+   {
+    "month": "2026-08",
+    "channel": "Meta Ads",
+    "spend": 2500,
+    "impressions": 410000,
+    "clicks": 4200,
+    "conversions": 120,
+    "qualified": 10,
+    "won": 0,
+    "revenue": 0
+   },
+   {
+    "month": "2026-09",
+    "channel": "Meta Ads",
+    "spend": 3000,
+    "impressions": 495000,
+    "clicks": 5200,
+    "conversions": 160,
+    "qualified": 11,
+    "won": 1,
+    "revenue": 8000
+   },
+   {
+    "month": "2026-10",
+    "channel": "Meta Ads",
+    "spend": 3500,
+    "impressions": 590000,
+    "clicks": 6300,
+    "conversions": 210,
+    "qualified": 12,
+    "won": 0,
+    "revenue": 0
+   }
+  ],
+  "email": [
+   {
+    "month": "2026-08",
+    "campaign": "Séquence nurturing",
+    "sent": 9000,
+    "opened": 3600,
+    "clicked": 520,
+    "conversions": 28
+   },
+   {
+    "month": "2026-09",
+    "campaign": "Séquence nurturing",
+    "sent": 9500,
+    "opened": 3700,
+    "clicked": 560,
+    "conversions": 30
+   },
+   {
+    "month": "2026-10",
+    "campaign": "Séquence nurturing",
+    "sent": 9800,
+    "opened": 3650,
+    "clicked": 610,
+    "conversions": 35
+   }
+  ],
+  "site": [
+   {
+    "month": "2026-08",
+    "sessions": 18000,
+    "conversions": 310
+   },
+   {
+    "month": "2026-09",
+    "sessions": 19500,
+    "conversions": 360
+   },
+   {
+    "month": "2026-10",
+    "sessions": 21000,
+    "conversions": 420
+   }
+  ]
+ },
+ "auto": {
+  "id": "auto",
+  "name": "Garage du Léman",
+  "sector": {
+   "fr": "Concession automobile multimarques",
+   "en": "Multi-brand car dealership"
+  },
+  "city": "Nyon",
+  "pitch": {
+   "fr": "Concession de trois marques, 2 canaux payants, une newsletter et un CRM vendeurs.",
+   "en": "Three-brand dealership, 2 paid channels, a newsletter and a sales CRM."
+  },
+  "currency": "CHF",
+  "labels": {
+   "conversions": {
+    "fr": "leads",
+    "en": "leads"
+   },
+   "revenue": {
+    "fr": "CA véhicules",
+    "en": "vehicle revenue"
+   }
+  },
+  "ads": [
+   {
+    "month": "2026-08",
+    "channel": "Meta Ads",
+    "spend": 1200,
+    "impressions": 240000,
+    "clicks": 3900,
+    "conversions": 82
+   },
+   {
+    "month": "2026-09",
+    "channel": "Meta Ads",
+    "spend": 1200,
+    "impressions": 251000,
+    "clicks": 4100,
+    "conversions": 85
+   },
+   {
+    "month": "2026-10",
+    "channel": "Meta Ads",
+    "spend": 1300,
+    "impressions": 275000,
+    "clicks": 4500,
+    "conversions": 96
+   },
+   {
+    "month": "2026-08",
+    "channel": "Google Ads · Performance Max",
+    "spend": 1500,
+    "impressions": 150000,
+    "clicks": 2600,
+    "conversions": 48
+   },
+   {
+    "month": "2026-09",
+    "channel": "Google Ads · Performance Max",
+    "spend": 1500,
+    "impressions": 148000,
+    "clicks": 2500,
+    "conversions": 50
+   },
+   {
+    "month": "2026-10",
+    "channel": "Google Ads · Performance Max",
+    "spend": 1500,
+    "impressions": 156000,
+    "clicks": 2700,
+    "conversions": 55
+   }
+  ],
+  "email": [
+   {
+    "month": "2026-08",
+    "campaign": "Newsletter",
+    "sent": 12000,
+    "opened": 4700,
+    "clicked": 380,
+    "conversions": 22
+   },
+   {
+    "month": "2026-09",
+    "campaign": "Newsletter",
+    "sent": 12100,
+    "opened": 4650,
+    "clicked": 360,
+    "conversions": 19
+   },
+   {
+    "month": "2026-10",
+    "campaign": "Newsletter",
+    "sent": 12300,
+    "opened": 4800,
+    "clicked": 410,
+    "conversions": 24
+   }
+  ],
+  "site": [
+   {
+    "month": "2026-08",
+    "sessions": 23000,
+    "conversions": 120
+   },
+   {
+    "month": "2026-09",
+    "sessions": 24000,
+    "conversions": 126
+   },
+   {
+    "month": "2026-10",
+    "sessions": 26500,
+    "conversions": 140
+   }
+  ],
+  "crm": [
+   {
+    "month": "2026-08",
+    "leads": 190,
+    "contacted_48h": 160,
+    "test_drives": 52,
+    "sales": 14,
+    "revenue": 520000
+   },
+   {
+    "month": "2026-09",
+    "leads": 198,
+    "contacted_48h": 150,
+    "test_drives": 50,
+    "sales": 13,
+    "revenue": 480000
+   },
+   {
+    "month": "2026-10",
+    "leads": 226,
+    "contacted_48h": 141,
+    "test_drives": 46,
+    "sales": 11,
+    "revenue": 410000
+   }
+  ]
+ }
+}

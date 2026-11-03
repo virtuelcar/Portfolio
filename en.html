@@ -310,12 +310,87 @@
 
       <p class="transpose">The same approach works for competitive monitoring, document summaries or reporting.</p>
 
-      <a class="try" href="agent-en.html">
-        <span class="label">Live demo</span>
-        <span class="try-t">Try the marketing analyst agent</span>
-        <span class="try-d">Pick a fictional company: the agent computes the KPIs and writes a decision note with three recommendations, in about ten seconds.</span>
-        <span class="try-go">Run the demo <span aria-hidden="true">→</span></span>
-      </a>
+      <article class="project concept">
+        <div class="project-head">
+          <div>
+            <span class="label">Designed project · ready to deploy</span>
+            <h3>WhatsApp lead qualification agent</h3>
+            <p>The longer a request waits, the less likely it is to convert, and sales teams cannot always call back right away. This agent contacts every new lead on WhatsApp a few minutes after the request, in their language, answers questions about the products and qualifies them. The salesperson receives a ready lead, with a summary and the next step.</p>
+          </div>
+          <div class="gain">
+            <span class="label">Goal</span>
+            <div class="v"><b>&lt; 5 min</b></div>
+            <small>to first contact, 7 days a week</small>
+          </div>
+        </div>
+
+        <div class="concept-grid">
+          <div>
+            <h4 class="sub">How it works</h4>
+            <ol class="cflow">
+              <li><b>The lead comes in</b>Website form or Meta ad, with a box to agree to be contacted on WhatsApp.</li>
+              <li><b>First message</b>n8n receives the request and, a few minutes later, sends a message approved by Meta. If it cannot be delivered, the agent switches to SMS or email.</li>
+              <li><b>The conversation</b>Claude replies in the customer's language, using only the company's catalogue: products, prices, availability.</li>
+              <li><b>Qualification</b>A few questions suited to the industry: project, budget, timing, financing. The lead is rated hot, warm or cold.</li>
+              <li><b>Handover</b>An appointment is offered, a summary goes into the CRM and the salesperson is alerted. A person takes over whenever needed.</li>
+            </ol>
+          </div>
+          <figure class="wa" aria-label="Sample conversation">
+            <div class="wa-top"><span class="wa-av" aria-hidden="true">G</span><span><b>Garage du Léman</b><small>Business account</small></span></div>
+            <div class="wa-body">
+              <p class="in">Bonjour Anna, merci pour votre demande sur le SUV électrique. Je suis l'assistant du Garage du Léman. Avez-vous quelques minutes pour préciser votre projet ?<time>14:32</time></p>
+              <p class="out">Hi, sorry, can we do this in English? Is it available in white?<time>14:35</time></p>
+              <p class="in">Of course! Yes, the white version is in stock at our Nyon showroom. Would you finance it, or do you have a car to trade in?<time>14:35</time></p>
+              <p class="out">Trade-in, a 2019 Golf. I'd like to decide by the end of the month.<time>14:37</time></p>
+              <p class="in">Thanks. I can book a test drive with Marc on Saturday at 10:00 and he will value your Golf on site. Shall I confirm?<time>14:37</time></p>
+              <p class="out">Perfect 👍<time>14:38</time></p>
+            </div>
+            <figcaption class="crm-card">
+              <span class="label">Sent to the CRM</span>
+              <b>Hot lead</b> · test drive Saturday 10:00 with Marc · trade-in 2019 Golf · decision by month end · language: English
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="concept-cols">
+          <div>
+            <h4 class="sub">Which industries</h4>
+            <ul class="plain">
+              <li><b>Automotive</b>: model, trade-in, financing, test drive.</li>
+              <li><b>Real estate</b>: buy or rent, budget, area, viewing.</li>
+              <li><b>Services</b> (schools, gyms…): need, schedule, sign-up.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="sub">Safeguards</h4>
+            <ul class="plain">
+              <li>Contact only with the customer's consent.</li>
+              <li>No invented price or delivery time: the catalogue is the only source.</li>
+              <li>Off-topic requests declined, as WhatsApp requires.</li>
+              <li>Handover to a person on request or when in doubt.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="sub">What we measure</h4>
+            <ul class="plain">
+              <li>Time to first contact</li>
+              <li>WhatsApp reply rate</li>
+              <li>Share of qualified leads</li>
+              <li>Appointments booked, then sales</li>
+            </ul>
+          </div>
+        </div>
+
+        <h4 class="sub">Rollout</h4>
+        <ol class="rollout">
+          <li><b>Scoping</b>Catalogue, qualification questions per industry, rules for handing over to sales.</li>
+          <li><b>WhatsApp Business</b>Dedicated number, Meta Business account, approved first message, consent box in the forms.</li>
+          <li><b>Build</b>n8n workflow: form, sending delay, WhatsApp API, Claude API, CRM connection.</li>
+          <li><b>Pilot</b>One brand or branch for a month, compared with leads handled the usual way.</li>
+          <li><b>Rollout</b>Extended to other teams, KPIs reviewed monthly.</li>
+        </ol>
+        <ul class="tools" aria-label="Planned tools"><li>n8n</li><li>Claude API</li><li>WhatsApp Business Platform</li><li>Meta Lead Ads</li><li>Salesforce or HubSpot</li></ul>
+      </article>
 
       <div class="block">
         <div class="block-head"><h4>My method</h4><p>The one I followed for these two agents</p></div>

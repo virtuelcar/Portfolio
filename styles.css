@@ -263,12 +263,6 @@ figure { margin: 0; min-width: 0; }
 .shot img { max-width: none; width: 1100px; height: auto; }
 @media (min-width: 1000px) { .shot img { width: 100%; max-width: 100%; } }
 .shots figcaption { font-size: 14px; color: var(--ink-soft); margin-top: 10px; }
-.try { display: grid; gap: 8px; margin-top: 32px; padding: 30px 34px; background: #1e4636; color: #f4f2ec; text-decoration: none; max-width: 760px; transition: background .2s; }
-.try:hover { background: #173a2c; }
-.try .label { color: rgba(244, 242, 236, 0.7); }
-.try-t { font-family: var(--font-display); font-weight: 500; font-size: clamp(26px, 3vw, 34px); line-height: 1.15; }
-.try-d { font-weight: 300; font-size: 16.5px; max-width: 56ch; color: rgba(244, 242, 236, 0.9); }
-.try-go { margin-top: 8px; font-size: 13px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #d4b97e; }
 .transpose { margin: 28px 0 0; font-family: var(--font-display); font-size: 24px; line-height: 1.35; max-width: 46ch; }
 
 .method { margin-top: 28px; list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); counter-reset: m; border-top: 1px solid var(--gold); }
@@ -317,3 +311,43 @@ dialog .close { display: block; margin: 0 0 12px auto; font: 500 12px var(--font
 dialog p { color: #e8e7e2; font-size: 14px; margin: 12px 0 0; text-align: center; }
 
 @media (prefers-reduced-motion: reduce) { .strip img, .btn, .rail .fill, .rail .dot { transition: none; } .strip button:hover img { transform: none; } }
+
+/* Concept: WhatsApp lead qualification agent */
+.concept .gain small { display: block; margin-top: 6px; font-size: 13.5px; color: var(--ink-soft); max-width: 18ch; }
+.concept h4.sub { margin: 0 0 14px; color: var(--ink); }
+.concept-grid { margin-top: 36px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 380px); gap: 40px; align-items: start; }
+.cflow { list-style: none; margin: 0; padding: 0; counter-reset: c; border-left: 1px solid var(--gold); }
+.cflow li { counter-increment: c; position: relative; padding: 0 0 18px 30px; font-size: 15.5px; color: var(--ink-soft); }
+.cflow li:last-child { padding-bottom: 0; }
+.cflow li::before { content: counter(c); position: absolute; left: -12px; top: 0; width: 23px; height: 23px; border-radius: 50%; background: var(--bg); border: 1px solid var(--gold); color: var(--gold); font: 500 12px/21px var(--font-body); text-align: center; }
+.cflow b, .rollout b { display: block; font-weight: 500; color: var(--ink); }
+.wa { margin: 0; border: 1px solid var(--line); background: #efeae2; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; font-size: 14px; line-height: 1.4; color: #111b21; }
+.wa-top { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: #075e54; color: #fff; }
+.wa-top small { display: block; font-size: 11.5px; opacity: .8; }
+.wa-av { width: 34px; height: 34px; border-radius: 50%; background: #f4f2ec; color: #075e54; display: grid; place-items: center; font-weight: 700; flex: none; }
+.wa-body { padding: 14px 12px; display: grid; gap: 6px; }
+.wa-body p { margin: 0; max-width: 86%; padding: 7px 10px 18px; border-radius: 8px; position: relative; box-shadow: 0 1px .5px rgba(11, 20, 26, .13); }
+.wa-body .in { background: #fff; justify-self: start; border-top-left-radius: 0; }
+.wa-body .out { background: #d9fdd3; justify-self: end; border-top-right-radius: 0; }
+.wa-body time { position: absolute; right: 8px; bottom: 3px; font-size: 10.5px; color: #667781; }
+.crm-card { margin: 0; padding: 12px 14px 14px; background: #fff; border-top: 2px solid var(--gold); font-family: var(--font-body); font-size: 14px; line-height: 1.5; color: #15181a; }
+.crm-card .label { display: block; margin-bottom: 4px; }
+.crm-card b { color: #1e4636; }
+.concept-cols { margin-top: 40px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
+.concept-cols > div { min-width: 0; }
+.plain { margin: 0; padding: 0; list-style: none; font-size: 15px; }
+.plain li { padding: 6px 0; border-bottom: 1px solid var(--line); }
+.plain li:last-child { border-bottom: 0; }
+.plain b { font-weight: 500; }
+.concept > h4.sub { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line); }
+.rollout { list-style: none; margin: 0 0 24px; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); counter-reset: r; }
+.rollout li { counter-increment: r; padding: 0 18px 0 0; font-size: 14.5px; color: var(--ink-soft); min-width: 0; }
+.rollout li + li { padding-left: 18px; border-left: 1px solid var(--line); }
+.rollout li::before { content: counter(r, upper-roman); display: block; font-family: var(--font-display); font-size: 22px; color: var(--gold); line-height: 1; margin-bottom: 8px; }
+@media (max-width: 900px) {
+  .concept-grid { grid-template-columns: 1fr; }
+  .wa { max-width: 420px; }
+  .concept-cols { grid-template-columns: 1fr; gap: 22px; }
+  .rollout { grid-template-columns: 1fr; gap: 14px; }
+  .rollout li, .rollout li + li { padding: 0; border-left: 0; }
+}

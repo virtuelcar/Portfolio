@@ -310,12 +310,87 @@
 
       <p class="transpose">Le même principe sert à la veille concurrentielle, à la synthèse de documents ou au reporting.</p>
 
-      <a class="try" href="agent.html">
-        <span class="label">Démo en direct</span>
-        <span class="try-t">Essayez l'agent analyste marketing</span>
-        <span class="try-d">Choisissez une entreprise fictive : l'agent calcule les KPI et rédige une note de décision avec trois recommandations, en une dizaine de secondes.</span>
-        <span class="try-go">Lancer la démo <span aria-hidden="true">→</span></span>
-      </a>
+      <article class="project concept">
+        <div class="project-head">
+          <div>
+            <span class="label">Projet conçu · prêt à déployer</span>
+            <h3>Agent de qualification des leads sur WhatsApp</h3>
+            <p>Plus une demande attend, moins elle aboutit, et les vendeurs ne peuvent pas toujours rappeler tout de suite. Cet agent contacte chaque nouveau lead sur WhatsApp quelques minutes après sa demande, dans sa langue, répond à ses questions sur les produits et le qualifie. Le vendeur reçoit un lead prêt, avec un résumé et la prochaine action.</p>
+          </div>
+          <div class="gain">
+            <span class="label">Objectif</span>
+            <div class="v"><b>&lt; 5 min</b></div>
+            <small>pour le premier contact, 7 jours sur 7</small>
+          </div>
+        </div>
+
+        <div class="concept-grid">
+          <div>
+            <h4 class="sub">Comment il fonctionne</h4>
+            <ol class="cflow">
+              <li><b>Le lead arrive</b>Formulaire du site ou publicité Meta, avec une case pour accepter d'être recontacté sur WhatsApp.</li>
+              <li><b>Premier message</b>n8n reçoit la demande et envoie quelques minutes plus tard un message validé par Meta. S'il ne peut pas être remis, l'agent passe par SMS ou email.</li>
+              <li><b>La conversation</b>Claude répond dans la langue du client, uniquement à partir du catalogue de l'entreprise : produits, prix, disponibilités.</li>
+              <li><b>La qualification</b>Quelques questions adaptées au secteur : projet, budget, délai, financement. Le lead est classé chaud, tiède ou froid.</li>
+              <li><b>Le relais</b>Proposition de rendez-vous, résumé dans le CRM et alerte au vendeur. Un humain reprend la main dès que nécessaire.</li>
+            </ol>
+          </div>
+          <figure class="wa" aria-label="Exemple de conversation">
+            <div class="wa-top"><span class="wa-av" aria-hidden="true">G</span><span><b>Garage du Léman</b><small>Compte professionnel</small></span></div>
+            <div class="wa-body">
+              <p class="in">Bonjour Anna, merci pour votre demande sur le SUV électrique. Je suis l'assistant du Garage du Léman. Avez-vous quelques minutes pour préciser votre projet ?<time>14:32</time></p>
+              <p class="out">Hi, sorry, can we do this in English? Is it available in white?<time>14:35</time></p>
+              <p class="in">Of course! Yes, the white version is in stock at our Nyon showroom. Would you finance it, or do you have a car to trade in?<time>14:35</time></p>
+              <p class="out">Trade-in, a 2019 Golf. I'd like to decide by the end of the month.<time>14:37</time></p>
+              <p class="in">Thanks. I can book a test drive with Marc on Saturday at 10:00 and he will value your Golf on site. Shall I confirm?<time>14:37</time></p>
+              <p class="out">Perfect 👍<time>14:38</time></p>
+            </div>
+            <figcaption class="crm-card">
+              <span class="label">Envoyé au CRM</span>
+              <b>Lead chaud</b> · essai samedi 10:00 avec Marc · reprise Golf 2019 · décision avant la fin du mois · langue : anglais
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="concept-cols">
+          <div>
+            <h4 class="sub">Pour quels secteurs</h4>
+            <ul class="plain">
+              <li><b>Automobile</b> : modèle, reprise, financement, essai.</li>
+              <li><b>Immobilier</b> : achat ou location, budget, quartier, visite.</li>
+              <li><b>Services</b> (écoles, salles de sport…) : besoin, horaires, inscription.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="sub">Garde-fous</h4>
+            <ul class="plain">
+              <li>Contact uniquement si le client l'a accepté.</li>
+              <li>Aucun prix ni délai inventé : seul le catalogue fait foi.</li>
+              <li>Refus des sujets hors de l'offre, comme l'exige WhatsApp.</li>
+              <li>Passage à un humain à la demande ou en cas de doute.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="sub">Ce qu'on mesure</h4>
+            <ul class="plain">
+              <li>Délai du premier contact</li>
+              <li>Taux de réponse sur WhatsApp</li>
+              <li>Part de leads qualifiés</li>
+              <li>Rendez-vous pris, puis ventes</li>
+            </ul>
+          </div>
+        </div>
+
+        <h4 class="sub">La mise en place</h4>
+        <ol class="rollout">
+          <li><b>Cadrage</b>Catalogue, questions de qualification par secteur, règles de passage au vendeur.</li>
+          <li><b>WhatsApp Business</b>Numéro dédié, compte Meta Business, premier message validé, case de consentement dans les formulaires.</li>
+          <li><b>Construction</b>Workflow n8n : formulaire, délai d'envoi, API WhatsApp, API Claude, connexion au CRM.</li>
+          <li><b>Pilote</b>Une marque ou une agence pendant un mois, comparée aux leads traités comme avant.</li>
+          <li><b>Déploiement</b>Extension aux autres équipes, suivi mensuel des indicateurs.</li>
+        </ol>
+        <ul class="tools" aria-label="Outils prévus"><li>n8n</li><li>API Claude</li><li>WhatsApp Business Platform</li><li>Meta Lead Ads</li><li>Salesforce ou HubSpot</li></ul>
+      </article>
 
       <div class="block">
         <div class="block-head"><h4>Ma méthode</h4><p>Celle que j'ai suivie pour ces deux agents</p></div>

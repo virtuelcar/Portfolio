@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Khalil Bouguerra</title>
 <meta name="description" content="Khalil Bouguerra – Digital Marketing Manager, performance et IA. Genève et canton de Vaud, tous secteurs.">
+<meta name="theme-color" content="#1e4636">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Khalil Bouguerra · Digital Marketing Manager, performance & IA">
+<meta property="og:description" content="Je crée des systèmes d’acquisition qui amènent des clients, et j’automatise avec l’IA ce qui ralentit les équipes. Genève et canton de Vaud.">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Khalil Bouguerra", "jobTitle": "Digital Marketing Manager", "email": "mailto:b.khalil@outlook.com", "telephone": "+41767768044", "address": {"@type": "PostalAddress", "addressRegion": "Genève", "addressCountry": "CH"}, "knowsAbout": ["Meta Ads", "Google Ads", "Performance Max", "Salesforce", "n8n", "Claude API", "AI automation"], "sameAs": ["https://www.linkedin.com/in/khalilbouguerra/"]}</script>
 <link rel="alternate" hreflang="fr" href="index.html">
 <link rel="alternate" hreflang="en" href="en.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +22,7 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a class="skip" href="#contenu">Aller au contenu</a>
 <header class="nav">
   <div class="wrap nav-row">
     <a class="brand" href="#depart">Khalil Bouguerra</a>
@@ -41,7 +51,7 @@
   </ol>
 </nav>
 
-<main>
+<main id="contenu" tabindex="-1">
   <section class="hero" id="depart">
     <div class="wrap hero-grid">
       <div>
@@ -176,7 +186,7 @@
             <div>
               <div class="metrics">
                 <div class="metric"><div class="v">≈ 70</div><div class="k">leads pour les meilleures campagnes</div></div>
-                <div class="metric"><div class="v">≈ 17 CHF</div><div class="k">coût par lead sur Meta Ads</div></div>
+                <div class="metric"><div class="v">≈ 17<small>&nbsp;CHF</small></div><div class="k">coût par lead sur Meta Ads</div></div>
                 <div class="metric"><div class="v">3 – 4</div><div class="k">ventes par campagne</div></div>
                 <div class="metric"><div class="v">≈ 5 %</div><div class="k">des leads transformés en ventes</div></div>
               </div>
@@ -420,7 +430,7 @@
       </div>
       <dl class="facts">
         <div><dt>Téléphone</dt><dd class="tel"><a href="tel:+41767768044">+41 76 776 80 44</a></dd></div>
-        <div><dt>Email</dt><dd id="mail">b.khalil@outlook.com</dd></div>
+        <div><dt>Email</dt><dd><a id="mail" href="mailto:b.khalil@outlook.com">b.khalil@outlook.com</a></dd></div>
         <div><dt>Région</dt><dd>Genève, La Côte, ou Lausanne en partie à distance</dd></div>
         <div><dt>Disponibilité</dt><dd>Dès décembre 2026, à 90 ou 100 %</dd></div>
         <div><dt>Langues</dt><dd>Français, arabe, anglais</dd></div>
@@ -436,8 +446,12 @@
 
 <dialog id="lightbox" aria-label="Visuel agrandi">
   <button class="close" type="button" id="lb-close">Fermer</button>
-  <img id="lb-img" alt="">
-  <p id="lb-cap"></p>
+  <div class="lb-stage">
+    <button class="lb-nav prev" type="button" id="lb-prev" aria-label="Visuel précédent">‹</button>
+    <img id="lb-img" alt="">
+    <button class="lb-nav next" type="button" id="lb-next" aria-label="Visuel suivant">›</button>
+  </div>
+  <p id="lb-cap" aria-live="polite"></p>
 </dialog>
 
 <script src="site.js"></script>
